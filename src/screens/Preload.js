@@ -1,16 +1,19 @@
+import AsyncStorage from "@react-native-community/async-storage";
 import { NavigationActions, StackActions } from "react-navigation";
 import { connect } from "react-redux";
 
 const Preload = props => {
+  // take care with this !!! ---- !!! -----
+  // AsyncStorage.clear();
   if (!props.token) {
     props.navigation.dispatch(StackActions.reset({
       index: 0,
       actions: [NavigationActions.navigate({routeName: 'Login'})],
     }));
   } else {
-    props.navigations.dispatch(StackActions.reset({
+    props.navigation.dispatch(StackActions.reset({
       index: 0,
-      actions: [NavigationActions.navigate({routeName: 'HomeStack'})],
+      actions: [NavigationActions.navigate({routeName: 'Login'})],
     }));
   }
 
