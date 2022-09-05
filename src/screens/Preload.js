@@ -13,7 +13,7 @@ const Preload = props => {
   } else {
     props.navigation.dispatch(StackActions.reset({
       index: 0,
-      actions: [NavigationActions.navigate({routeName: 'Login'})],
+      actions: [NavigationActions.navigate({routeName: 'HomeDrawer'})],
     }));
   }
 
