@@ -47,14 +47,14 @@ export default {
     `,
   IntineraryTitle: styled.Text`
     margin-left:10px;
-    color:#999;
+    color:#999999;
     `,
   IntineraryValue: styled.Text`
-    color:#000;
+    color:#000000;
     font-size:16px;
     `,
   IntineraryPlaceHolder: styled.Text`
-    color:#555;
+    color:#5555;
     font-size:16px;
     text-align:center;
     `,
@@ -66,12 +66,12 @@ export default {
     align-items:center;
     `,
   RequestTitle: styled.Text`
-    color:#999;
+    color:#999999;
     font-weight:bold;
     font-size:15px;
     `,
   RequestValue: styled.Text`
-    color:#000;
+    color:#000000;
     font-size:17px;
     `,
   RequestButtons: styled.View`

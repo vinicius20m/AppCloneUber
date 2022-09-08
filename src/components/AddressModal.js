@@ -28,7 +28,7 @@ const ModalCloseText = styled.Text``;
 const ModalInput = styled.TextInput`
   margin-left:20px;
   font-size:18px;
-  color:#000;
+  color: #000000;
 `;
 
 const ModalResults = styled.View``;
@@ -38,7 +38,7 @@ const ModalResult = styled.TouchableHighlight`
 `;
 
 const ModalResultText = styled.Text`
-  color:#000;
+  color:#000000;
   font-size:16px;
 `;
 
@@ -78,17 +78,17 @@ export default (props) => {
 
         setResults([
           {
-            adress:'Primeiro Teste',
+            address:'Primeiro Teste',
             latitude: 37.79825,
             longitude: -122.4324,
           },
           {
-            adress:'Segundo Teste',
+            address:'Segundo Teste',
             latitude: 37.77825,
             longitude: -122.4324,
           },
           {
-            adress:'Terceiro Teste',
+            address:'Terceiro Teste',
             latitude: 37.58825,
             longitude: -122.4324,
           },

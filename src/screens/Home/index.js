@@ -44,6 +44,7 @@ const Page = (props) => {
   useEffect(() => {
     if (fromLoc.center && toLoc.center) {
       setShowDirections(true);
+      handleDirectionsReady();
     }
   }, [toLoc]);
 
@@ -66,23 +67,29 @@ const Page = (props) => {
   };
 
 
-  const handleDirectionsReady = async (r) => {
+  const handleDirectionsReady = async (r = {
+    distance: 2,
+    duration: 27,
+    coordinates: [
+      37.78815,
+      -122.4321],
+    }) => {
     setRequestDistance(r.distance);
     setRequestTime(r.duration);
 
-    // const priceReq = await api.getRequestPrice(r.distance);
-    // if (!priceReq.error) {
-    //   setRequestPrice(priceReq.price);
-    // }
+    const priceReq = await api.getRequestPrice(r.distance);
+    if (!priceReq.error) {
+      setRequestPrice(priceReq.price);
+    }
 
-    map.current.fitToCoordinates(r.coordinates, {
-      edgePadding: {
-        left: 50,
-        right: 50,
-        bottom: 20,
-        top: 1100
-      }
-    });
+    // map.current.fitToCoordinates(r.coordinates, {
+    //   edgePadding: {
+    //     left: 50,
+    //     right: 50,
+    //     bottom: 20,
+    //     top: 1100
+    //   }
+    // });
   };
 
   const handleRequestGo = async () => {
